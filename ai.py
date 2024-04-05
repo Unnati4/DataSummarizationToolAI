@@ -53,18 +53,17 @@ def tellTime():
 	min = time[14:16]
 	speak("The time is" + hour + "Hours and" + min + "Minutes")
 
-def Hello():
-	
-	# This function is for when the assistant 
-	# is called it will say hello and then 
-	# take query
-	speak("Hello sir I am your desktop assistant. /Tell me how may I help you")
+speak("Hello sir I am your desktop assistant. Tell me how may I help you")
 
 option = st.selectbox(
     'Choose your option',
-    ('How to Login?', 'How to use Data Visualisation', 'How to use Analysis', 'Day?', 'Time?', 'Exit')
+    ('None', 'How to Login?', 'How to use Data Visualisation', 'How to use Analysis', 'Day?', 'Time?', 'Exit')
 )
-if option == 'How to Login?':
+
+if option == 'None':
+		st.write('Choose any option.')
+
+elif option == 'How to Login?':
 			st.write("To Login Follow the following commands: 1. Open the data summarization tool. 2. Click on the Login Button visible on the top-right corner. 3. A login page will open. 4. Enter the username and password and click on the submit button.")
 			speak("To Login Follow the following commands: 1. Open the data summarization tool. 2. Click on the Login Button visible on the top-right corner. 3. A login page will open. 4. Enter the username and password and click on the submit button.")
 		
